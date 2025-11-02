@@ -91,20 +91,20 @@
 	}
 
 	// Auto redraw
-// resize preview when controls change
-  $: {
-    // Dengan menyebutkan variabel ini di dalam blok reaktif,
-    // Svelte akan memantau perubahan mereka.
-    scale;
-    offsetX;
-    offsetY;
-    img; // Kita juga perlu menggambar ulang jika gambar berubah
+	// resize preview when controls change
+	$: {
+		// Dengan menyebutkan variabel ini di dalam blok reaktif,
+		// Svelte akan memantau perubahan mereka.
+		scale;
+		offsetX;
+		offsetY;
+		img; // Kita juga perlu menggambar ulang jika gambar berubah
 
-    // Panggil drawPreview() HANYA jika canvas sudah siap
-    if (previewCtx) {
-      drawPreview();
-    }
-  }
+		// Panggil drawPreview() HANYA jika canvas sudah siap
+		if (previewCtx) {
+			drawPreview();
+		}
+	}
 
 	async function convertAndPrepareDownload() {
 		if (!previewCanvas) return;
@@ -269,7 +269,7 @@
 			</form>
 		</div>
 
-		<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+		<div class="mt-6">
 			<div class="bg-gray-800 rounded-xl p-4">
 				<h2 class="text-md font-medium mb-2">Preview (128×128)</h2>
 				<div class="flex gap-4 items-start">
@@ -283,9 +283,7 @@
 					/>
 
 					<div class="flex-1">
-						<div class="mb-2 text-xs text-gray-400">
-							Zoom dan geser dalam area 128x128.
-						</div>
+						<div class="mb-2 text-xs text-gray-400">Zoom dan geser dalam area 128x128.</div>
 
 						<div class="mb-2">
 							<label class="text-xs">Scale: {scale.toFixed(2)}</label>
@@ -312,20 +310,6 @@
 				</div>
 			</div>
 
-			<div class="bg-gray-800 rounded-xl p-4">
-				<h2 class="text-md font-medium mb-2">Info & Notes</h2>
-				<ul class="text-sm text-gray-300 list-disc ml-5">
-					<li>Area preview adalah hasil final 128x128.</li>
-					<li>DDS output 32-bit tanpa kompresi (A8R8G8B8).</li>
-					<li>
-						Nama file mengikuti versi PES:
-						<ul class="list-disc ml-5">
-							<li>PES 2017 → player_ID.dds</li>
-							<li>PES 2021 → ID.dds</li>
-						</ul>
-					</li>
-				</ul>
 			</div>
-		</div>
 	</div>
 </div>
