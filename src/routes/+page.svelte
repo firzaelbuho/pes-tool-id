@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <main class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 flex flex-col">
   <!-- Header -->
   <header class="py-8 text-center border-b border-gray-700">
@@ -18,7 +21,7 @@
             AIO Miniface Converter
           </h2>
           <p class="text-gray-400 text-sm leading-relaxed">
-            Konversi dan sesuaikan miniface PES Anda dengan mudah, cepat, dan otomatis.
+						Convert and generate any images to PES Miniface compatible format
           </p>
           <div class="mt-8">
             <span
@@ -38,7 +41,7 @@
             AIO Emblem Converter
           </h2>
           <p class="text-gray-400 text-sm leading-relaxed">
-            Ubah dan konversi emblem klub atau liga PES dengan hasil terbaik.
+            Convert and generate any images to PES Emblems/Logo compatible format
           </p>
           <div class="mt-8">
             <span
