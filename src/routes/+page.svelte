@@ -1,11 +1,12 @@
 <script>
+import { resolve } from '$app/paths';
 </script>
 
 <main class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 flex flex-col">
   <!-- Header -->
   <header class="py-8 text-center border-b border-gray-700">
     <h1 class="text-4xl font-bold tracking-wide text-white">PES Tool ID</h1>
-    <p class="mt-2 text-gray-400 text-lg">Pro Evolution Soccer / EFootball Classic Tools</p>
+    <p class="mt-2 text-gray-400 text-lg">Pro Evolution Soccer / EFootball Mod Tools</p>
   </header>
 
   <!-- Content -->
@@ -13,7 +14,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
 
       <!-- Card: AIO Miniface Converter -->
-      <a href="/aio-miniface"
+      <a href={resolve("/aio-miniface")}
         class="group relative bg-gray-800 rounded-xl p-10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl border border-gray-700 hover:border-indigo-500">
         <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
         <div class="relative z-10">
@@ -33,7 +34,7 @@
       </a>
 
       <!-- Card: AIO Emblem Converter -->
-      <a href="/aio-emblem"
+			<a href={resolve("/aio-emblem")}
         class="group relative bg-gray-800 rounded-xl p-10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl border border-gray-700 hover:border-indigo-500">
         <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
         <div class="relative z-10">
